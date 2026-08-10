@@ -78,14 +78,3 @@ VALUES
 Insert Into PostHashTag(post_id , hashtag_id)
 VALUES
 (103,1), (103,2);
-
-
-
-
-
-
-
-
-
-
-
