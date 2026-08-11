@@ -85,3 +85,9 @@ SELECT instructor_name FROM Instructor WHERE instructor_salary > ALL (SELECT ins
 
 -- Greater Than ANY
 SELECT instructor_name FROM Instructor WHERE instructor_salary > ANY (SELECT instructor_salary FROM Instructor WHERE dept_id = 1);
+
+-- Display students and instructors in dept_id 1
+SELECT student_name FROM Student WHERE dept_id = 1 UNION SELECT instructor_name FROM Instructor WHERE dept_id = 1;
+
+-- Student not enrolled in any course
+SELECT student_id FROM Student EXCEPT SELECT student_id FROM Enrollment;
