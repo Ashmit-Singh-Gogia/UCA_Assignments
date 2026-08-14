@@ -29,6 +29,12 @@ const createStudent = (name, age, mail, marks) => {
 }
 
 const student3 = createStudent("Rahul", 26, "rahul@gmail.com ", 97)
+const student4 = createStudent("vijay", 23, "vijay@gmail.com ", 100)
 
 console.log(student3.name + " has got " + student3.percentage() + "% marks")
 
+console.log(student3.__proto__ == student4.__proto__)
+
+console.log(student3.hasOwnProperty("names"));
+
+console.log(student3.hasOwnProperty("name"));
