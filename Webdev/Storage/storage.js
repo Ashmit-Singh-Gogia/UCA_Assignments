@@ -33,3 +33,14 @@ localStorage.clear();
 
 // Cookies and local is same across all tabs for a domain
 // But cookies are sent with every request to the server while local storage is not
+
+
+// Local Storage and Session Storage both have a limit of 5mb while cookies have 4kb
+
+// Local Storage key is domain related while session key is related to domain + current tab
+
+
+// Cookies are sticky means they are sent with every request to the server while local storage is not
+// cookies size is restricted to 4kb size because its sent with every request headers size is limited to 4kb
+
+// main purpose of cookie is not storage but for authentication or identification of user

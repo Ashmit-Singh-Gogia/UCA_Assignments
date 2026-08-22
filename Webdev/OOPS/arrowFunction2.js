@@ -11,3 +11,11 @@
 // but if some inner functions call such functions they are not pointing to our class objects
 // But in case of arrow functions they are pointing to the same context, like their parents
 // Hence they preserve the 'this' keyword
+
+// We cant use new keyword with arrow fucnctions becase they dont have their own this keyword 
+// while constructor functions need their own 'this' keyword
+
+// Arrow functions are suitable for classes behaviour
+
+
+// In normal function declarations we have an argument object we can use // while its not there in arrow functions
