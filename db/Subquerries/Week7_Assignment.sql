@@ -1,19 +1,18 @@
 Use SQL_Tutorial;
 
--- The following query uses the LIKE operator to find all employees with the first names starting with the string Da :
-Select first_name , last_name from employees Where first_name Like 'Da%' Order by first_name;
+-- The Data we are working on is in ../Data.sql
 
--- The following statement uses the LIKE operator to find employees whose first names end with er:
-Select first_name , last_name from employees Where first_name Like '%er';
+-- The following example uses the GROUP BY clause to group the values in department_id column of the employees table:
+Select department_id from employees Group By department_id;
 
--- The following query uses the LIKE operator to find employees whose first names contain the word an:
-Select first_name , last_name from employees Where first_name Like '%an%';
+-- The GROUP BY clause will be more useful when you use it with an aggregate function.
 
--- The following query uses the LIKE operator to find employees whose first names start with Jo and are followed by two characters:
-Select first_name , last_name from employees Where first_name Like 'Jo__';
+-- the following statement uses the GROUP BY clause with the COUNT function to count the number of employees by department:
+Select department_id , Count(employee_id) From employees Group By department_id;
 
--- The following query uses the LIKE operator with the % and _ wildcard characters to find employees whose first names start with any number of characters then 'are' amd then followed by a single character:
-Select first_name , last_name from employees Where first_name Like '%are_';
 
--- The following example uses the NOT LIKE operator to find all employees whose first names start with the letter S but not start with Sh:
-Select first_name , last_name from employees Where first_name Like 'S%' and first_name Not Like 'Sh%';
+-- The following example returns the number of employees by department. And it uses an INNER JOIN clause to include the department name in the result:
+SELECT d.department_name, COUNT(employee_id) headcount from employees e 
+
+  
+-- Select department_name , Count(employee_id) headcount From employees group by department_name; 
